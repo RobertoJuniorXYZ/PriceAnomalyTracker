@@ -7,19 +7,44 @@ PriceAnomalyTracker pode ser aplicado em várias áreas, incluindo finanças, de
 PriceAnomalyTracker é especialmente útil quando você precisa detectar anomalias em dados de um mesmo grupo. Por exemplo, pode ser usado para identificar preços anômalos na venda de um modelo específico de carro, onde os preços devem estar próximos e seguir uma tendência semelhante. A biblioteca é versátil o suficiente para ser aplicada em várias situações em que você deseja encontrar discrepâncias em dados que compartilham características comuns.
 
 
-## Instalação
+## Instalação e Utilização
 
-Para instalar o PriceAnomalyTracker, você pode usar o pip:
+From PyPI:
 
 ```
 pip install PriceAnomalyTracker
 ```
 
-## Uso
 ```
-# Exemplo de uso para detectar anomalias em preços de produtos
+# Exemplo de uso para detectar anomalias em preços de um determinado produto
 
 import PriceAnomalyTracker
+
+data = [4250.2, 6665.5, 6665.6, 6665.56, 6135.12, 6665.6, 6672.2, 7221.1, 7221.1, 7799.0, 7852.9]
+
+results = PriceAnomalyTracker(data)
+
+for item in results:
+    value, is_anomaly = item
+    if is_anomaly:
+        print(f"Anomalia detectada: {value}")
+    else:
+        print(f"Valor normal: {value}")
+```
+
+From GitHub:
+
+```
+!git clone https://github.com/RobertoJuniorXYZ/PriceAnomalyTracker.git
+```
+
+```
+# Exemplo de uso para detectar anomalias em preços de um determinado produto
+
+import sys
+sys.path.append('PriceAnomalyTracker')
+
+from PriceAnomalyTracker import PriceAnomalyTracker
 
 data = [4250.2, 6665.5, 6665.6, 6665.56, 6135.12, 6665.6, 6672.2, 7221.1, 7221.1, 7799.0, 7852.9]
 
