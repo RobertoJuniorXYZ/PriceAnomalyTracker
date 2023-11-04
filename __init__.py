@@ -1,1 +1,1 @@
-from .PriceAnomalyTracker import *
+from PriceAnomalyTracker import *

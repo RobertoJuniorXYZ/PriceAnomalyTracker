@@ -1,2 +1,5 @@
 /dist
 /PriceAnomalyTracker.egg-info
+/__pycache__
+/__init__.py
+/setup.py
