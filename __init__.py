@@ -1,1 +1,1 @@
-import PriceAnomalyTracker
+from PriceAnomalyTracker import PriceAnomalyTracker
