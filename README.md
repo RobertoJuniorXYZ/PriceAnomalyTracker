@@ -44,11 +44,11 @@ From GitHub:
 import sys
 sys.path.append('PriceAnomalyTracker')
 
-from PriceAnomalyTracker import PriceAnomalyTracker
+from PriceAnomalyTracker import PriceAnomalyTracker as PAT
 
 data = [4250.2, 6665.5, 6665.6, 6665.56, 6135.12, 6665.6, 6672.2, 7221.1, 7221.1, 7799.0, 7852.9]
 
-results = PriceAnomalyTracker(data)
+results = PAT.PriceAnomalyTracker(data)
 
 for item in results:
     value, is_anomaly = item
