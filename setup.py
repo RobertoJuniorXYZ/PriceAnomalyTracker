@@ -4,7 +4,7 @@ with open("README.md", "r") as file:
     readme = file.read()
     
 setup(name='PriceAnomalyTracker',
-    version='1.1.0',
+    version='1.1.1',
     license='MIT License',
     author='Roberto Junior',
     long_description=readme,
